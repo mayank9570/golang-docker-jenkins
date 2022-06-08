@@ -1,10 +1,10 @@
 BASE_TAG=$(shell git rev-parse --short HEAD)
 # image name for docker
-IMAGE_NAME=mayanks95/webapp
+IMAGE_NAME=charlires/webapp
 # app name for go packages
 APP_NAME=webapp
 # base golang image tag
-GOLANG_TAG=1.18.2-alpine
+GOLANG_TAG=1.9.2-alpine
 # build args for Dockerfile's
 BUILD_BASE_ARGS=--build-arg APP_NAME=$(APP_NAME) --build-arg GOLANG_TAG=$(GOLANG_TAG)
 BUILD_TEST_ARGS=--build-arg IMAGE_NAME=$(IMAGE_NAME) --build-arg BASE_TAG=$(BASE_TAG)
