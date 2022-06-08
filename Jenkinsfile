@@ -4,13 +4,13 @@ pipeline {
   stages {
     stage('build base image') {
       steps {
-        sh 'build-base'
+        sh 'make build-base'
       }
     }
     stage('run tests') {
       steps {
-        sh 'build-test'
-        sh 'test-unit'
+        sh 'make build-test'
+        sh 'make test-unit'
         sh 'ls'
         junit 'report/report.xml'
       }
